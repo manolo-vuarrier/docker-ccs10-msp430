@@ -29,12 +29,12 @@ RUN curl -L https://software-dl.ti.com/ccs/esd/CCSv10/CCS_10_4_0/exports/CCS10.4
 
 RUN ./tmp/ccs/CCS10.4.0.00006_linux-x64/ccs_setup_10.4.0.00006.run --prefix /opt/ccs1004/ --enable-components PF_MSP430 --mode unattended
 
-# Clean archive files
-# RUN rm -f /tmp/ccs/ccs10.4.0.tar.gz
+ Clean archive files
+ RUN rm -f /tmp/ccs/ccs10.4.0.tar.gz
 
-# Install compiler
-# RUN curl -L https://software-dl.ti.com/codegen/esd/cgt_public_sw/MSP430/21.6.0.LTS/ti_cgt_msp430_21.6.0.LTS_linux-x64_installer.bin -o /tmp/ccs/ti_cgt_msp430_21.6.0.LTS_linux-x64_installer.bin --silent
-# ./ti_cgt_msp430_21.6.0.LTS_linux-x64_installer.bin --prefix /opt/ccs1004/
+ Install compiler
+ RUN curl -L https://software-dl.ti.com/codegen/esd/cgt_public_sw/MSP430/21.6.0.LTS/ti_cgt_msp430_21.6.0.LTS_linux-x64_installer.bin -o /tmp/ccs/ti_cgt_msp430_21.6.0.LTS_linux-x64_installer.bin --silent
+ ./ti_cgt_msp430_21.6.0.LTS_linux-x64_installer.bin --prefix /opt/ccs1004/
 
 ENV PATH="/opt/ccs1004/ccs/eclipse:${PATH}"
 
